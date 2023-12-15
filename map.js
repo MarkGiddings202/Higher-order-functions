@@ -18,13 +18,13 @@ console.log(timesTen);
     3. Print out both "practice" and the new mapped array
 */
 
-let practice = [25,26,27,28,29,30];
+let practice = [25, 26, 27, 28, 29, 30];
 
-let mapped = practice.map((nums) =>{
-   return nums
-})
+let mapped = practice.map((nums) => {
+  return nums;
+});
 
-// console.log(mapped)
+console.log(mapped);
 
 // exercise 1
 /*
@@ -41,16 +41,88 @@ let mapped = practice.map((nums) =>{
           number function built-in to Javascript to use
 */
 
-let bools = [true, true, false, true, false, false]
+let bools = [true, true, false, true, false, false];
 
 let mappedbools = bools.map((x) => {
-    if(x) {
-        return Math.random() 
-    } else {
-        return 1
-    }
-   
-})
+  if (x) {
+    return Math.random();
+  } else {
+    return 1;
+  }
+});
 
-console.log(bools)
-console.log(mappedbools)
+console.log(bools);
+console.log(mappedbools);
+
+// Exercise two
+
+/*
+    1. Create an array called "prices" with the following values:
+        [1.23, 19.99, 85.2, 32.87, 8, 5.2]
+
+    2. Create a new array using map called "taxedPrices" that:
+        - If the price is greater than 10, add 20% tax to it
+        - Otherwise, do not add any tax
+
+    3. Print out both arrays
+*/
+
+let prices = [1.23, 19.99, 85.2, 32.87, 8, 5.2];
+
+let taxedPrices = prices.map((money) => {
+  if (money > 10) {
+    money = money * 1.2;
+  }
+  return money;
+});
+
+console.log(prices);
+console.log(taxedPrices);
+
+/*
+    1. Create the following array called "items":
+        ["light", "banana", "phone", "book", "mouse"]
+
+    2. Create an new array called "plurals" that:
+        - maps over "items" and adds an 's' to each one
+
+    3. Print out both arrays
+
+    4. Change it so if we see "mouse", we instead return "mice"
+*/
+
+let items = ["light", "banana", "phone", "book", "mouse"];
+
+let plurals = items.map((plu) => {
+  if (plu === "mouse") {
+    return "mice";
+  }
+  return `${plu}s`;
+});
+
+console.log(items);
+console.log(plurals);
+
+// Bonus
+/*
+    1. Create the following array called "row":
+        [10, 20, 30, 40, 50]
+
+    2. Create an new array called "matrix" that:
+        - maps over "row" and return each item, but in an array
+        (We should have a 2-dimensional array as a result)
+
+    3. Print out both arrays
+
+    "matrix" should look like this:
+        [[10], [20], [30], [40], [50]]
+*/
+
+let row = [10, 20, 30, 40, 50];
+
+let matrix = row.map((item) => {
+  return [item];
+});
+
+console.log(row);
+console.log(matrix);
