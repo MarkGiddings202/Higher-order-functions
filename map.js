@@ -126,3 +126,6 @@ let matrix = row.map((item) => {
 
 console.log(row);
 console.log(matrix);
+
+
+console.log("Testing connections for github contributions")
