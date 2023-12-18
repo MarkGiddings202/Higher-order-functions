@@ -128,4 +128,4 @@ console.log(row);
 console.log(matrix);
 
 
-console.log("Testing connections for github contributions")
+console.log("Testing complete")
