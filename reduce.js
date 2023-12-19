@@ -118,3 +118,14 @@ const concat = caps.reduce((results, str) => {
 console.log(items);
 console.log(caps);
 console.log(concat);
+
+// oneStep
+let oneliner = items
+  .map((str) => {
+    return str.toUpperCase();
+  })
+  .reduce((results, str) => {
+    return results + " " + str;
+  }, "");
+
+  console.log(oneliner)
